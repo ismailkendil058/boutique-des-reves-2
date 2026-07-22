@@ -107,6 +107,7 @@ function LoginPage() {
           <a href="/admin" className="text-xs" style={{ color: "rgba(26,26,26,0.55)" }}>
             Espace administration
           </a>
+          <span className="text-xs" style={{ color: "rgba(26,26,26,0.55)" }}>V2.0</span>
         </div>
       </div>
     </div>
