@@ -79,7 +79,7 @@ function NotesPage() {
           <button
             onClick={() => setDateFilter("")}
             className="text-xs"
-            style={{ color: "#BA93DF" }}
+            style={{ color: "#6B2D71" }}
           >
             Réinitialiser
           </button>

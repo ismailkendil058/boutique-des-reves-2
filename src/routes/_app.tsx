@@ -57,7 +57,7 @@ function AppLayout() {
   };
 
   return (
-    <div className="min-h-screen flex bg-[#FAF9F6]">
+    <div className="min-h-screen flex bg-[#F2F2F2]">
       <Toaster position="top-right" richColors />
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex w-[260px] flex-col bg-white border-r border-[#F0EEEC] py-10 px-6">
@@ -75,8 +75,8 @@ function AppLayout() {
                 to={item.to}
                 className="flex items-center gap-3.5 px-4 py-3 rounded-xl text-sm transition-all duration-300 relative"
                 style={{
-                  background: active ? "rgba(186, 147, 223, 0.07)" : "transparent",
-                  color: active ? "#8f67b5" : "#555555",
+                  background: active ? "rgba(107, 45, 113, 0.07)" : "transparent",
+                  color: active ? "#6B2D71" : "#555555",
                   fontWeight: active ? 500 : 400,
                   letterSpacing: "0.03em",
                 }}
@@ -90,7 +90,7 @@ function AppLayout() {
         <div className="mt-auto pt-8 border-t border-[#F0EEEC] px-3">
           <div className="text-[10px] uppercase tracking-[0.12em] text-neutral-400">Session</div>
           <div className="text-[14px] font-medium text-neutral-700 mt-1">{auth.employeeName}</div>
-          <button onClick={handleLogout} className="mt-4 text-[12px] uppercase tracking-[0.12em] font-semibold flex items-center gap-1.5 transition-colors hover:text-[#8f67b5]" style={{ color: "#BA93DF", cursor: "pointer" }}>
+          <button onClick={handleLogout} className="mt-4 text-[12px] uppercase tracking-[0.12em] font-semibold flex items-center gap-1.5 transition-colors hover:text-[#6B2D71]" style={{ color: "#6B2D71", cursor: "pointer" }}>
             <LogOut className="w-4 h-4" /> Déconnexion
           </button>
         </div>
@@ -121,8 +121,8 @@ function AppLayout() {
                     onClick={closeMobile}
                     className="flex items-center gap-4 px-4 py-3 rounded-xl text-[15px] transition-all duration-300 relative"
                     style={{
-                      background: active ? "rgba(186, 147, 223, 0.07)" : "transparent",
-                      color: active ? "#8f67b5" : "#555555",
+                      background: active ? "rgba(107, 45, 113, 0.07)" : "transparent",
+                      color: active ? "#6B2D71" : "#555555",
                       fontWeight: active ? 500 : 400,
                       letterSpacing: "0.03em",
                     }}
@@ -136,7 +136,7 @@ function AppLayout() {
             <div className="mt-auto pt-8 border-t border-[#F0EEEC] px-3">
               <div className="text-[10px] uppercase tracking-[0.12em] text-neutral-400">Session</div>
               <div className="text-[15px] font-medium text-neutral-700 mt-1">{auth.employeeName}</div>
-              <button onClick={handleLogout} className="mt-4 text-[13px] uppercase tracking-[0.12em] font-semibold flex items-center gap-1.5" style={{ color: "#BA93DF" }}>
+              <button onClick={handleLogout} className="mt-4 text-[13px] uppercase tracking-[0.12em] font-semibold flex items-center gap-1.5" style={{ color: "#6B2D71" }}>
                 <LogOut className="w-4 h-4" /> Déconnexion
               </button>
             </div>
@@ -151,7 +151,7 @@ function AppLayout() {
             <Menu className="w-9 h-9" />
           </button>
           <div className="brand-name flex-1 font-light tracking-[0.15em] uppercase text-neutral-800" style={{ fontSize: 20 }}>Boutique des Rêves</div>
-          <button onClick={handleLogout} aria-label="Déconnexion" className="p-1" style={{ color: "#BA93DF" }}>
+          <button onClick={handleLogout} aria-label="Déconnexion" className="p-1" style={{ color: "#6B2D71" }}>
             <LogOut className="w-9 h-9" />
           </button>
         </header>

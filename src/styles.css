@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /* Boutique des Rêves — Design System
-   3 colors only: bg #FFFFFF, purple #BA93DF, ink #E5E5E5
+   3 colors only: bg #FFFFFF, purple #6B2D71, ink #E5E5E5
    2 fonts: Cormorant Garamond (display), Montserrat (body)
 */
 
@@ -47,30 +47,30 @@
 }
 
 :root {
-  --brand: #BA93DF;
-  --brand-soft: rgba(186, 147, 223, 0.10);
-  --brand-tint: rgba(186, 147, 223, 0.06);
+  --brand: #6B2D71;
+  --brand-soft: rgba(107, 45, 113, 0.10);
+  --brand-tint: rgba(107, 45, 113, 0.06);
   --ink: #F0EEEC;
 
-  --background: #FAF9F6;
+  --background: #F0F0F0;
   --foreground: #1A1A1A;
   --card: #FFFFFF;
   --card-foreground: #1A1A1A;
   --popover: #FFFFFF;
   --popover-foreground: #1A1A1A;
-  --primary: #BA93DF;
+  --primary: #6B2D71;
   --primary-foreground: #1A1A1A;
-  --secondary: #FAF9F6;
+  --secondary: #F2F2F2;
   --secondary-foreground: #1A1A1A;
-  --muted: #FAF9F6;
+  --muted: #F2F2F2;
   --muted-foreground: rgba(26, 26, 26, 0.5);
-  --accent: rgba(186, 147, 223, 0.06);
-  --accent-foreground: #BA93DF;
+  --accent: rgba(107, 45, 113, 0.06);
+  --accent-foreground: #6B2D71;
   --destructive: #C0392B;
   --destructive-foreground: #FFFFFF;
   --border: #F0EEEC;
   --input: #F0EEEC;
-  --ring: #BA93DF;
+  --ring: #6B2D71;
 
   --danger: #C0392B;
   --success: #27AE60;
@@ -198,18 +198,18 @@ img {
 .input-field:focus-visible {
   outline: none;
   border-color: var(--brand);
-  box-shadow: 0 0 0 4px rgba(186, 147, 223, 0.15);
+  box-shadow: 0 0 0 4px rgba(107, 45, 113, 0.15);
 }
 .input-field::placeholder { color: rgba(26, 26, 26, 0.35); }
 
 .btn-primary:hover {
-  background: #a479cb;
+  background: #5a2260;
   transform: translateY(-1px);
-  box-shadow: 0 10px 20px -5px rgba(186, 147, 223, 0.2);
+  box-shadow: 0 10px 20px -5px rgba(107, 45, 113, 0.2);
 }
 .btn-primary:active { transform: translateY(0) scale(0.98); }
 .btn-ghost:hover {
-  background: rgba(186, 147, 223, 0.08);
+  background: rgba(107, 45, 113, 0.08);
   transform: translateY(-1px);
 }
 .btn-ghost:active { transform: translateY(0) scale(0.98); }

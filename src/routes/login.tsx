@@ -59,7 +59,7 @@ function LoginPage() {
           <div className="mt-2 text-xs" style={{ color: "rgba(26,26,26,0.55)" }}>Espace employé</div>
         </div>
 
-        <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "#BA93DF" }}>
+        <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B2D71" }}>
           Choisir un employé
         </label>
         <select
@@ -83,8 +83,8 @@ function LoginPage() {
               className="inline-block rounded-full"
               style={{
                 width: 14, height: 14,
-                background: pin.length > i ? "#BA93DF" : "transparent",
-                border: "1.5px solid #BA93DF",
+                background: pin.length > i ? "#6B2D71" : "transparent",
+                border: "1.5px solid #6B2D71",
               }}
             />
           ))}
@@ -95,7 +95,7 @@ function LoginPage() {
             <button
               key={i}
               onClick={() => k === "⌫" ? back() : press(k)}
-              className="h-14 rounded-[10px] border text-xl font-normal transition-all hover:bg-[rgba(186, 147, 223,0.06)] active:bg-[#BA93DF] active:text-[#1A1A1A]"
+              className="h-14 rounded-[10px] border text-xl font-normal transition-all hover:bg-[rgba(107, 45, 113,0.06)] active:bg-[#6B2D71] active:text-[#1A1A1A]"
               style={{ borderColor: "#E5E5E5" }}
             >
               {k === "⌫" ? <Delete className="inline w-5 h-5" /> : k}

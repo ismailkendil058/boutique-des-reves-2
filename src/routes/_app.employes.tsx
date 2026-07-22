@@ -44,18 +44,18 @@ function EmployeesPage() {
                 <Td style={{ letterSpacing: "0.15em" }}>••••</Td>
                 <Td>
                   <span className="pill" style={{
-                    background: e.active ? "rgba(186, 147, 223,0.10)" : "#E5E5E5",
-                    color: e.active ? "#BA93DF" : "rgba(26,26,26,0.6)",
+                    background: e.active ? "rgba(107, 45, 113,0.10)" : "#E5E5E5",
+                    color: e.active ? "#6B2D71" : "rgba(26,26,26,0.6)",
                   }}>
                     {e.active ? "Actif" : "Désactivé"}
                   </span>
                 </Td>
                 <Td style={{ textAlign: "right" }}>
                   <div className="flex gap-3 justify-end">
-                    <button onClick={() => setEditingPinFor(e.id)} title="Modifier le PIN" className="p-2 rounded hover:bg-black/5" style={{ color: "#BA93DF" }}>
+                    <button onClick={() => setEditingPinFor(e.id)} title="Modifier le PIN" className="p-2 rounded hover:bg-black/5" style={{ color: "#6B2D71" }}>
                       <KeyRound className="w-4 h-4" />
                     </button>
-                    <button onClick={() => toggleEmployee(e.id)} title={e.active ? "Désactiver" : "Activer"} className="p-2 rounded hover:bg-black/5" style={{ color: e.active ? "#BA93DF" : "rgba(26,26,26,0.6)" }}>
+                    <button onClick={() => toggleEmployee(e.id)} title={e.active ? "Désactiver" : "Activer"} className="p-2 rounded hover:bg-black/5" style={{ color: e.active ? "#6B2D71" : "rgba(26,26,26,0.6)" }}>
                       <Power className="w-4 h-4" />
                     </button>
                     <button onClick={async () => { if (window.confirm("Supprimer cet employé ?")) { await deleteEmployee(e.id); } }} title="Supprimer" className="p-2 rounded hover:bg-black/5" style={{ color: "#dc2626" }}>

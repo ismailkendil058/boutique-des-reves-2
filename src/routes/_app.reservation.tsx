@@ -125,7 +125,7 @@ function ReservationPage() {
                     <tr
                       key={r.id}
                       onClick={() => setOpenRes(r)}
-                      className="cursor-pointer hover:bg-[rgba(186, 147, 223,0.04)]"
+                      className="cursor-pointer hover:bg-[rgba(107, 45, 113,0.04)]"
                       style={{ 
                         borderBottom: "1px solid #E5E5E5", 
                         borderLeft: isCancelled ? "3px solid #C0392B" : "3px solid #D4820A",
@@ -300,10 +300,10 @@ function NewReservationModal({ open, onClose }: { open: boolean; onClose: () => 
                     }
                   }}
                   className="text-left p-3 rounded-lg border transition-colors"
-                  style={{ borderColor: sel ? "#BA93DF" : "#E5E5E5", background: sel ? "rgba(186, 147, 223,0.06)" : "white" }}
+                  style={{ borderColor: sel ? "#6B2D71" : "#E5E5E5", background: sel ? "rgba(107, 45, 113,0.06)" : "white" }}
                 >
                   <div className="text-sm font-medium truncate">{a.name}</div>
-                  <div className="text-xs" style={{ color: "#BA93DF" }}>{formatDA(a.price)}</div>
+                  <div className="text-xs" style={{ color: "#6B2D71" }}>{formatDA(a.price)}</div>
                 </button>
               );
             })}
@@ -327,10 +327,10 @@ function NewReservationModal({ open, onClose }: { open: boolean; onClose: () => 
                     }
                   }}
                   className="text-left p-3 rounded-lg border transition-colors"
-                  style={{ borderColor: sel ? "#BA93DF" : "#E5E5E5", background: sel ? "rgba(186, 147, 223,0.06)" : "white" }}
+                  style={{ borderColor: sel ? "#6B2D71" : "#E5E5E5", background: sel ? "rgba(107, 45, 113,0.06)" : "white" }}
                 >
                   <div className="text-sm font-medium truncate">{a.name}</div>
-                  <div className="text-xs" style={{ color: "#BA93DF" }}>{formatDA(a.price)}</div>
+                  <div className="text-xs" style={{ color: "#6B2D71" }}>{formatDA(a.price)}</div>
                 </button>
               );
             })}
@@ -359,7 +359,7 @@ function NewReservationModal({ open, onClose }: { open: boolean; onClose: () => 
 
         {/* Service */}
         <Section title="Service Additionnel">
-          <div className="flex items-center gap-4 p-3 rounded-lg border bg-white" style={{ borderColor: machtaActive ? "#BA93DF" : "#E5E5E5" }}>
+          <div className="flex items-center gap-4 p-3 rounded-lg border bg-white" style={{ borderColor: machtaActive ? "#6B2D71" : "#E5E5E5" }}>
             <label className="flex items-center gap-2.5 cursor-pointer font-medium text-sm flex-1">
               <input
                 type="checkbox"
@@ -370,8 +370,8 @@ function NewReservationModal({ open, onClose }: { open: boolean; onClose: () => 
                     setMachtaPrice(15000);
                   }
                 }}
-                className="w-4 h-4 rounded text-[#BA93DF] focus:ring-[#BA93DF] border-gray-300"
-                style={{ accentColor: "#BA93DF" }}
+                className="w-4 h-4 rounded text-[#6B2D71] focus:ring-[#6B2D71] border-gray-300"
+                style={{ accentColor: "#6B2D71" }}
               />
               <span>Service Machta</span>
             </label>
@@ -449,7 +449,7 @@ function NewReservationModal({ open, onClose }: { open: boolean; onClose: () => 
           <div className="space-y-2">
             <div className="flex items-center justify-between text-sm">
               <span style={{ color: "rgba(26,26,26,0.6)" }}>Total calculé</span>
-              <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 22, color: "#BA93DF" }}>{formatDA(total)}</span>
+              <span style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 22, color: "#6B2D71" }}>{formatDA(total)}</span>
             </div>
             {versement !== "" && Number(versement) > 0 && (
               <div className="flex items-center justify-between text-sm">
@@ -540,8 +540,8 @@ function ReservationDetail({ reservationId, onClose }: { reservationId: string; 
           <div className="flex items-center gap-3">
             <button
               onClick={() => window.print()}
-              className="cursor-pointer p-1.5 rounded-md hover:bg-[rgba(186, 147, 223,0.08)] transition-colors"
-              style={{ color: "#BA93DF" }}
+              className="cursor-pointer p-1.5 rounded-md hover:bg-[rgba(107, 45, 113,0.08)] transition-colors"
+              style={{ color: "#6B2D71" }}
               title="Imprimer le contrat"
             >
               <Printer className="w-4 h-4" />
@@ -591,13 +591,13 @@ function ReservationDetail({ reservationId, onClose }: { reservationId: string; 
             {arts.map((a) => (
               <li key={a.id} className="flex items-center justify-between text-sm py-2 border-b" style={{ borderColor: "#E5E5E5" }}>
                 <span>{a.name}</span>
-                <span style={{ color: "#BA93DF" }}>{formatDA(getResArticlePrice(reservation, a.id, a.price))}</span>
+                <span style={{ color: "#6B2D71" }}>{formatDA(getResArticlePrice(reservation, a.id, a.price))}</span>
               </li>
             ))}
             {machta.active && (
               <li className="flex items-center justify-between text-sm py-2 border-b" style={{ borderColor: "#E5E5E5" }}>
                 <span>Service Machta</span>
-                <span style={{ color: "#BA93DF" }}>{formatDA(machta.price)}</span>
+                <span style={{ color: "#6B2D71" }}>{formatDA(machta.price)}</span>
               </li>
             )}
           </ul>
@@ -647,7 +647,7 @@ function ReservationDetail({ reservationId, onClose }: { reservationId: string; 
             <button
               onClick={() => setVersementOpen(true)}
               className="text-sm flex items-center gap-1.5 cursor-pointer px-3 py-1.5 rounded-lg"
-              style={{ color: "#BA93DF", border: "1px solid #BA93DF", fontWeight: 500 }}
+              style={{ color: "#6B2D71", border: "1px solid #6B2D71", fontWeight: 500 }}
             >
               <CreditCard className="w-4 h-4" /> Ajouter un versement
             </button>
@@ -660,7 +660,7 @@ function ReservationDetail({ reservationId, onClose }: { reservationId: string; 
                 <li key={v.id} className="flex items-center justify-between text-sm py-2 border-b" style={{ borderColor: "#E5E5E5" }}>
                   <div>
                     <span style={{ color: "rgba(26,26,26,0.6)" }}>{formatDate(v.date)}</span>
-                    <span className="ml-2 text-xs px-2 py-0.5 rounded" style={{ background: "rgba(186, 147, 223,0.08)", color: "#BA93DF" }}>{v.type}</span>
+                    <span className="ml-2 text-xs px-2 py-0.5 rounded" style={{ background: "rgba(107, 45, 113,0.08)", color: "#6B2D71" }}>{v.type}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span style={{ color: "#27AE60", fontWeight: 500 }}>{formatDA(v.amount)}</span>
@@ -749,8 +749,8 @@ function PrintReservationContract({ reservation }: { reservation: Reservation })
 
   return (
     <div style={{ fontFamily: "Montserrat, sans-serif", color: "#1A1A1A", fontSize: 13, lineHeight: 1.4, height: "100%", position: "relative", boxSizing: "border-box", background: "white" }}>
-      <div style={{ textAlign: "center", paddingBottom: 12, borderBottom: "2px solid #BA93DF" }}>
-        <div style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic", fontSize: 26, color: "#BA93DF", letterSpacing: "0.15em" }}>
+      <div style={{ textAlign: "center", paddingBottom: 12, borderBottom: "2px solid #6B2D71" }}>
+        <div style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic", fontSize: 26, color: "#6B2D71", letterSpacing: "0.15em" }}>
           Boutique des Rêves
         </div>
         <div style={{ fontSize: 11, marginTop: 2, color: "rgba(26,26,26,0.6)" }}>Contrat de réservation</div>
@@ -810,7 +810,7 @@ function PrintReservationContract({ reservation }: { reservation: Reservation })
       <div style={{ marginTop: 16, padding: 12, border: "1px solid #E5E5E5", borderRadius: 8, textAlign: "center" }}>
         <div>Total : <strong>{formatDA(reservation.total)}</strong></div>
         <div>Versé : {formatDA(totalVerse)}</div>
-        <div>Reste : <strong style={{ color: "#BA93DF" }}>{formatDA(reservation.total - totalVerse)}</strong></div>
+        <div>Reste : <strong style={{ color: "#6B2D71" }}>{formatDA(reservation.total - totalVerse)}</strong></div>
         {reservation.caution > 0 && <div>Caution : <strong>{formatDA(reservation.caution)}</strong></div>}
       </div>
 

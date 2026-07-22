@@ -104,9 +104,9 @@ function CaissePage() {
             return (
               <button key={m.id} onClick={() => setFilterMode(m.id)} className="pill cursor-pointer"
                 style={{
-                  background: active ? "#BA93DF" : "transparent",
+                  background: active ? "#6B2D71" : "transparent",
                   color: active ? "#1A1A1A" : "rgba(26,26,26,0.6)",
-                  border: active ? "1px solid #BA93DF" : "1px solid #E5E5E5",
+                  border: active ? "1px solid #6B2D71" : "1px solid #E5E5E5",
                   padding: "6px 14px", fontSize: 13,
                 }}>
                 {m.label}
@@ -152,7 +152,7 @@ function CaissePage() {
       <div className="card-surface" style={{ padding: 0 }}>
         <div className="px-6 py-4 border-b flex items-center justify-between" style={{ borderColor: "#E5E5E5" }}>
           <div className="section-label">Versements sur la période</div>
-          <div className="text-sm" style={{ color: "#BA93DF", fontWeight: 600 }}>Total : {formatDA(periodTotal)}</div>
+          <div className="text-sm" style={{ color: "#6B2D71", fontWeight: 600 }}>Total : {formatDA(periodTotal)}</div>
         </div>
         {allVersements.length === 0 ? (
           <div className="p-8 text-center text-sm" style={{ color: "rgba(26,26,26,0.55)" }}>Aucun versement sur cette période.</div>
@@ -176,7 +176,7 @@ function CaissePage() {
                     <Td>{client?.name}</Td>
                     <Td>{arts}</Td>
                     <Td>{v.type}</Td>
-                    <Td style={{ color: "#BA93DF", fontWeight: 500 }}>{formatDA(v.amount)}</Td>
+                    <Td style={{ color: "#6B2D71", fontWeight: 500 }}>{formatDA(v.amount)}</Td>
                   </tr>
                 );
               })}
@@ -191,7 +191,7 @@ function CaissePage() {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div className="card-surface">
-      <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 26, color: "#BA93DF" }}>{value}</div>
+      <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 26, color: "#6B2D71" }}>{value}</div>
       <div className="text-xs uppercase tracking-wider mt-2" style={{ color: "rgba(26,26,26,0.55)" }}>{label}</div>
     </div>
   );

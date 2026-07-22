@@ -24,7 +24,7 @@ export function FieldLabel({ label, children }: { label: string; children: React
     <label className="block">
       <span
         className="block text-xs font-semibold uppercase tracking-wider mb-1.5"
-        style={{ color: '#BA93DF' }}
+        style={{ color: '#6B2D71' }}
       >
         {label}
       </span>

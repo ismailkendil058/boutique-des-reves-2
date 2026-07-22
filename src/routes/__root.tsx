@@ -15,7 +15,7 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-white px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl" style={{ fontFamily: "Cormorant Garamond, serif", color: "#BA93DF" }}>404</h1>
+        <h1 className="text-7xl" style={{ fontFamily: "Cormorant Garamond, serif", color: "#6B2D71" }}>404</h1>
         <h2 className="mt-4 text-xl font-medium">Page introuvable</h2>
         <p className="mt-2 text-sm" style={{ color: "rgba(26,26,26,0.55)" }}>
           Cette page n'existe pas ou a été déplacée.
@@ -59,13 +59,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" },
       { title: "Boutique des Rêves" },
       { name: "description", content: "Système de gestion de locations de tenues traditionnelles et bijoux." },
-      { name: "theme-color", content: "#BA93DF" },
+      { name: "theme-color", content: "#6B2D71" },
       // Apple iOS PWA
       { name: "apple-mobile-web-app-capable", content: "yes" },
       { name: "apple-mobile-web-app-status-bar-style", content: "black-translucent" },
       { name: "apple-mobile-web-app-title", content: "Boutique des Rêves" },
       // Windows / Edge
-      { name: "msapplication-TileColor", content: "#BA93DF" },
+      { name: "msapplication-TileColor", content: "#6B2D71" },
       { name: "msapplication-tap-highlight", content: "no" },
       // General PWA
       { name: "mobile-web-app-capable", content: "yes" },

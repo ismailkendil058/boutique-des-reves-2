@@ -85,7 +85,7 @@ function ContractPage() {
                     </Td>
                     <Td>{c.articles.map((a) => a.name).join(", ")}</Td>
                     <Td>{formatDA(c.total)}</Td>
-                    <Td style={{ color: c.reste > 0 ? "#BA93DF" : "rgba(26,26,26,0.45)", fontWeight: c.reste > 0 ? 500 : 400 }}>{formatDA(c.reste)}</Td>
+                    <Td style={{ color: c.reste > 0 ? "#6B2D71" : "rgba(26,26,26,0.45)", fontWeight: c.reste > 0 ? 500 : 400 }}>{formatDA(c.reste)}</Td>
                     <Td style={{ textAlign: "right" }}>
                       <div className="flex items-center justify-end gap-2">
                         <button
@@ -131,7 +131,7 @@ function ContractPage() {
                   <div className="text-xs text-neutral-600 truncate">{c.articles.map((a) => a.name).join(", ")}</div>
                   <div className="flex justify-between items-center text-sm pt-1">
                     <div>Total: {formatDA(c.total)}</div>
-                    {c.reste > 0 && <div style={{ color: "#BA93DF", fontWeight: 500 }}>Reste: {formatDA(c.reste)}</div>}
+                    {c.reste > 0 && <div style={{ color: "#6B2D71", fontWeight: 500 }}>Reste: {formatDA(c.reste)}</div>}
                   </div>
                   <div className="flex justify-end gap-2 pt-2">
                     <button onClick={() => setSelectedContract(c)} className="btn-ghost" style={{ padding: "4px 8px", fontSize: 11 }}>
@@ -195,7 +195,7 @@ function ContractPage() {
                 <ul className="list-disc pl-5 text-sm mt-1 space-y-1">
                   {selectedContract.articles.map((a, idx) => (
                     <li key={idx}>
-                      {a.name} - <span style={{ color: "#BA93DF" }}>{formatDA(a.price)}</span>
+                      {a.name} - <span style={{ color: "#6B2D71" }}>{formatDA(a.price)}</span>
                     </li>
                   ))}
                 </ul>
@@ -209,7 +209,7 @@ function ContractPage() {
                   <span>Versé :</span>
                   <span>{formatDA(selectedContract.verse)}</span>
                 </div>
-                <div className="flex justify-between" style={{ color: "#BA93DF" }}>
+                <div className="flex justify-between" style={{ color: "#6B2D71" }}>
                   <span>Reste à payer :</span>
                   <strong>{formatDA(selectedContract.reste)}</strong>
                 </div>
@@ -240,8 +240,8 @@ function ContractPage() {
 function PrintSavedContract({ contract }: { contract: SavedContract }) {
   return (
     <div style={{ fontFamily: "Montserrat, sans-serif", color: "#1A1A1A", fontSize: 13, lineHeight: 1.4, height: "100%", position: "relative", boxSizing: "border-box", background: "white" }}>
-      <div style={{ textAlign: "center", paddingBottom: 12, borderBottom: "2px solid #BA93DF" }}>
-        <div style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic", fontSize: 26, color: "#BA93DF", letterSpacing: "0.15em" }}>
+      <div style={{ textAlign: "center", paddingBottom: 12, borderBottom: "2px solid #6B2D71" }}>
+        <div style={{ fontFamily: "Cormorant Garamond, serif", fontStyle: "italic", fontSize: 26, color: "#6B2D71", letterSpacing: "0.15em" }}>
           Boutique des Rêves
         </div>
         <div style={{ fontSize: 11, marginTop: 2, color: "rgba(26,26,26,0.6)" }}>Contrat de location</div>
@@ -277,7 +277,7 @@ function PrintSavedContract({ contract }: { contract: SavedContract }) {
       <div style={{ marginTop: 16, padding: 12, border: "1px solid #E5E5E5", borderRadius: 8, textAlign: "center" }}>
         <div>Total : <strong>{formatDA(contract.total)}</strong></div>
         <div>Versé : {formatDA(contract.verse)}</div>
-        <div>Reste : <strong style={{ color: "#BA93DF" }}>{formatDA(contract.reste)}</strong></div>
+        <div>Reste : <strong style={{ color: "#6B2D71" }}>{formatDA(contract.reste)}</strong></div>
         {contract.caution > 0 && <div>Caution : <strong>{formatDA(contract.caution)}</strong></div>}
       </div>
 

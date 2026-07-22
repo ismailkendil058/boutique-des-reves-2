@@ -65,8 +65,8 @@ function Dashboard() {
               <BarChart data={months}>
                 <XAxis dataKey="label" stroke="#E5E5E5" tick={{ fill: "#1A1A1A", fontSize: 12 }} />
                 <YAxis stroke="#E5E5E5" tick={{ fill: "#1A1A1A", fontSize: 12 }} />
-                <Tooltip cursor={{ fill: "rgba(186, 147, 223,0.06)" }} />
-                <Bar dataKey="count" fill="#BA93DF" radius={[6,6,0,0]} />
+                <Tooltip cursor={{ fill: "rgba(107, 45, 113,0.06)" }} />
+                <Bar dataKey="count" fill="#6B2D71" radius={[6,6,0,0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -84,10 +84,10 @@ function Dashboard() {
                   <div key={p.id} className="space-y-1">
                     <div className="flex justify-between text-sm">
                       <span className="font-medium">{idx + 1}. {p.name}</span>
-                      <span className="font-semibold" style={{ color: "#BA93DF" }}>{p.count} locations</span>
+                      <span className="font-semibold" style={{ color: "#6B2D71" }}>{p.count} locations</span>
                     </div>
                     <div className="w-full bg-[rgba(26,26,26,0.06)] rounded-full h-2">
-                      <div className="h-2 rounded-full" style={{ width: `${pct}%`, background: "#BA93DF" }} />
+                      <div className="h-2 rounded-full" style={{ width: `${pct}%`, background: "#6B2D71" }} />
                     </div>
                   </div>
                 );
@@ -120,8 +120,8 @@ function Dashboard() {
                     <td className="py-3 px-2">{client?.name}</td>
                     <td className="py-3 px-2">{arts}</td>
                     <td className="py-3 px-2">{days} j</td>
-                    <td className="py-3 px-2" style={{ color: "#BA93DF", fontWeight: 500 }}>{formatDA(locReste(l))}</td>
-                    <td className="py-3 px-2"><a href={`tel:${client?.phone}`} style={{ color: "#BA93DF" }}>Contacter</a></td>
+                    <td className="py-3 px-2" style={{ color: "#6B2D71", fontWeight: 500 }}>{formatDA(locReste(l))}</td>
+                    <td className="py-3 px-2"><a href={`tel:${client?.phone}`} style={{ color: "#6B2D71" }}>Contacter</a></td>
                   </tr>
                 );
               })}

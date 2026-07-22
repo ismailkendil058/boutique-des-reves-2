@@ -77,10 +77,10 @@ export function Modal({ open, onClose, title, children, footer, size = "md" }: {
 
 export function Badge({ status }: { status: string }) {
   const styles: Record<string, { bg: string; color: string }> = {
-    "Disponible": { bg: "rgba(186, 147, 223,0.10)", color: "#BA93DF" },
+    "Disponible": { bg: "rgba(107, 45, 113,0.10)", color: "#6B2D71" },
     "Loué":       { bg: "#E5E5E5", color: "rgba(26,26,26,0.7)" },
     "En entretien": { bg: "#FFF8EC", color: "#D4820A" },
-    "En cours":   { bg: "rgba(186, 147, 223,0.10)", color: "#BA93DF" },
+    "En cours":   { bg: "rgba(107, 45, 113,0.10)", color: "#6B2D71" },
     "À venir":    { bg: "#FFF8EC", color: "#D4820A" },
     "Rendue":     { bg: "#F0FAF4", color: "#27AE60" },
     "En retard":  { bg: "#FEF0F0", color: "#C0392B" },
@@ -96,7 +96,7 @@ export function Badge({ status }: { status: string }) {
 export function EmptyState({ title, cta, onCta, icon }: { title: string; cta?: string; onCta?: () => void; icon?: ReactNode }) {
   return (
     <div className="card-surface text-center" style={{ padding: 64 }}>
-      <div className="flex justify-center mb-4" style={{ color: "rgba(186, 147, 223,0.3)" }}>
+      <div className="flex justify-center mb-4" style={{ color: "rgba(107, 45, 113,0.3)" }}>
         {icon}
       </div>
       <div className="text-sm mb-4" style={{ color: "rgba(26,26,26,0.6)" }}>{title}</div>

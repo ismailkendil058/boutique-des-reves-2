@@ -111,7 +111,7 @@ function StockPage() {
                   aspectRatio: "4/3",
                   background: a.photo?.startsWith("http")
                     ? "transparent"
-                    : (a.photo ?? "#BA93DF"),
+                    : (a.photo ?? "#6B2D71"),
                   fontFamily: "Cormorant Garamond, serif",
                   fontStyle: "italic",
                   fontSize: 32,
@@ -141,7 +141,7 @@ function StockPage() {
                   </button>
                   {menuFor === a.id && (
                     <div className="absolute right-0 top-7 z-10 bg-white border rounded-lg shadow-lg w-44 py-1" style={{ borderColor: "#E5E5E5" }}>
-                      <button onClick={(e) => { e.stopPropagation(); openEdit(a); }} className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(186, 147, 223,0.04)]">Modifier</button>
+                      <button onClick={(e) => { e.stopPropagation(); openEdit(a); }} className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(107, 45, 113,0.04)]">Modifier</button>
                        <button
                         onClick={(e) => {
                           e.stopPropagation();
@@ -154,13 +154,13 @@ function StockPage() {
                             setNoteModalOpen(true);
                           }
                         }}
-                        className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(186, 147, 223,0.04)]"
+                        className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(107, 45, 113,0.04)]"
                       >
                         {a.status === "En entretien" ? "Marquer disponible" : "Marquer indisponible"}
                       </button>
                       <button
                         onClick={(e) => { e.stopPropagation(); if (confirm("Supprimer cet article ?")) deleteArticle(a.id); setMenuFor(null); }}
-                        className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(186, 147, 223,0.04)]"
+                        className="w-full text-left px-3 py-2 text-sm hover:bg-[rgba(107, 45, 113,0.04)]"
                         style={{ color: "#C0392B" }}
                       >
                         Supprimer
@@ -169,7 +169,7 @@ function StockPage() {
                   )}
                 </div>
               </div>
-              <div className="mt-3" style={{ fontSize: 16, fontWeight: 500, color: "#BA93DF" }}>{formatDA(a.price)}</div>
+              <div className="mt-3" style={{ fontSize: 16, fontWeight: 500, color: "#6B2D71" }}>{formatDA(a.price)}</div>
               <div className="mt-3 flex justify-end"><Badge status={a.status} /></div>
             </div>
           ))}
@@ -221,7 +221,7 @@ function StockPage() {
             Article : <strong>{noteArticle?.name}</strong>
           </div>
           <label className="block">
-            <span className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "#BA93DF" }}>
+            <span className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "#6B2D71" }}>
               Note (optionnel)
             </span>
             <textarea
@@ -270,9 +270,9 @@ function PillRow<T extends string>({ items, value, onChange }: { items: readonly
             onClick={() => onChange(it)}
             className="pill whitespace-nowrap transition-colors"
             style={{
-              background: active ? "#BA93DF" : "transparent",
+              background: active ? "#6B2D71" : "transparent",
               color: active ? "#1A1A1A" : "rgba(26,26,26,0.6)",
-              border: active ? "1px solid #BA93DF" : "1px solid #E5E5E5",
+              border: active ? "1px solid #6B2D71" : "1px solid #E5E5E5",
               padding: "6px 14px",
               fontSize: 13,
             }}
@@ -297,7 +297,7 @@ function ArticleDrawerInner({ open, onClose, article, onSave }: {
   open: boolean; onClose: () => void; article: Article | null;
   onSave: (data: Omit<Article, "id">) => void;
 }) {
-  const PURPLES = ["#BA93DF", "#9B5BA5", "#B884C0", "#D4B0D9", "#5E2A66"];
+  const PURPLES = ["#6B2D71", "#9B5BA5", "#B884C0", "#D4B0D9", "#5E2A66"];
   const [form, setForm] = useState<any>(() => article ?? {
     name: "", category: "Tenues" as Category, size: "", color: "", price: "", caution: 0,
     status: "Disponible" as ArticleStatus, notes: "",
@@ -505,7 +505,7 @@ function ArticleDrawerInner({ open, onClose, article, onSave }: {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "#BA93DF" }}>{label}</span>
+      <span className="block text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: "#6B2D71" }}>{label}</span>
       {children}
     </label>
   );

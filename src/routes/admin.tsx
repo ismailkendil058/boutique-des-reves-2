@@ -45,7 +45,7 @@ function AdminLogin() {
         </div>
 
         <form onSubmit={submit}>
-          <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "#BA93DF" }}>
+          <label className="block text-xs font-semibold uppercase tracking-wider mb-2" style={{ color: "#6B2D71" }}>
             Mot de passe
           </label>
           <div className="relative">
@@ -63,7 +63,7 @@ function AdminLogin() {
               type="button"
               onClick={() => setShow(!show)}
               className="absolute right-3 top-1/2 -translate-y-1/2"
-              style={{ color: "#BA93DF" }}
+              style={{ color: "#6B2D71" }}
               aria-label={show ? "Masquer" : "Afficher"}
             >
               {show ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
