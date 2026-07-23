@@ -498,6 +498,7 @@ export async function createReservation(
   const { articleIds, articlePrices, versements: _vers, ...rest } = res;
   const payload = toDB({
     ...rest,
+    status: "En attente",
     createdAt: new Date().toISOString().slice(0, 10),
   });
   const { data, error } = await supabase
