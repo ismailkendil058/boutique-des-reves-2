@@ -546,7 +546,7 @@ function ReservationDetail({ reservationId, onClose }: { reservationId: string; 
             >
               <Printer className="w-4 h-4" />
             </button>
-            {isAdmin && reservation.status !== "Validée" && (
+            {reservation.status !== "Validée" && (
               <button
                 onClick={doValidate}
                 className="cursor-pointer p-1.5 rounded-md hover:bg-[rgba(39,174,96,0.08)] transition-colors"
@@ -556,7 +556,7 @@ function ReservationDetail({ reservationId, onClose }: { reservationId: string; 
                 <CheckCircle className="w-4 h-4" />
               </button>
             )}
-            {isAdmin && reservation.status !== "Annulée" && (
+            {reservation.status !== "Annulée" && (
               <button
                 onClick={doCancel}
                 className="cursor-pointer p-1.5 rounded-md hover:bg-[rgba(230,126,34,0.08)] transition-colors"
